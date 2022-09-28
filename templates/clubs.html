@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{{ club }}
+<form action="/club_signup" method="post"> {% csrf_token %}
+  <input type="hidden" value= {{ each_card.club_name }} name="club-name" />
+<button type="submit" class="btn btn-primary stretched-link">View</button>
+{% endblock body %}
